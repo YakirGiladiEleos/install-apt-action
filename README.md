@@ -1,4 +1,4 @@
-# abc
+# install-apt-action
 Simply your build actions with Apt, Brew, and Choco dependencies in one action. Easy as ABC!
 ### Motivation
 Setting up a GitHub Action to build your project is fairly easy. One of the most
@@ -24,9 +24,9 @@ adding platform-specific dependencies to your build via `apt`, `brew`, and
 `choco`. Let's make platform-specific dependencies easy as ABC!
 
 ## Getting Started
-### Add a `lyricwulf/abc` step to your job to install dependencies:
+### Add a `eleos-health/install-apt-action` step to your job to install dependencies:
 ```yml
-- uses: lyricwulf/abc@v1
+- uses: eleos-health/install-apt-actionv1
   with: 
     linux: libfoo
     macos: mac-lib
@@ -68,7 +68,7 @@ jobs:
           - os: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: lyricwulf/abc@v1
+      - uses: eleos-health/install-apt-action@v1
         with:
           windows: lib-from-choco
           macos: lib-from-brew
